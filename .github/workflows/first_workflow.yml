@@ -1,0 +1,25 @@
+name: first_workflow
+on:
+       push:
+              branches: [ master ]
+
+              jobs: 
+                job_one:
+                name: Deploy
+                runs-on: ubuntu-latest
+                steps: 
+ - name: testing auto deployment of code
+   uses: appleboy/ssh-action@master
+   with: 
+   host: api.tommyjohn.com 
+   username: ubuntu
+   key: ${{ secrets.TEST_WORKFLOW_SECRET}}
+   port: 22
+   script: |
+           cd tj-apis/
+           git pull origin master
+           git status
+
+
+
+
