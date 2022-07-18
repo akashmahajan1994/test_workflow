@@ -11,12 +11,12 @@ jobs:
                 - name: testing auto deployment of code
                   uses: appleboy/ssh-action@master
                   with: 
-                        host: api.tommyjohn.com 
+                        host: 18.210.144.107
                         username: ubuntu
                         key: ${{ secrets.TEST_WORKFLOW_SECRET}}
                         port: 22
                         script: |
-                           cd cd test_workflow/
+                           cd test_workflow/
                            git pull origin master
                            git status
 
