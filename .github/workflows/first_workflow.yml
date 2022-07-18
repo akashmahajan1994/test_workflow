@@ -16,7 +16,7 @@ jobs:
                         key: ${{ secrets.TEST_WORKFLOW_SECRET}}
                         port: 22
                         script: |
-                           cd tj-apis/
+                           cd cd test_workflow/
                            git pull origin master
                            git status
 
