@@ -14,11 +14,9 @@ jobs:
                         host: 18.210.144.107
                         username: ubuntu
                         key: ${{ secrets.TEST_WORKFLOW_SECRET}}
-                        port: 22
+                        port: 80
                         script: |
-                           cd test_workflow/
-                           git pull origin master
-                           git status
+                           whoami
 
 
 
