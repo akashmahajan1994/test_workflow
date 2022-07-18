@@ -9,11 +9,11 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
                 - name: testing auto deployment of code
-                  uses: actions/checkout@v2
+                  uses: appleboy/ssh-action@master
                   with: 
                         host: 18.210.144.107
                         username: ubuntu
-                        key: ${{ secrets.TEST_WORKFLOW_SECRET}}
+                        password: ${{ secrets.TEST_WORKFLOW_SECRET}}
                         port: 80
                         script: |
                            whoami
