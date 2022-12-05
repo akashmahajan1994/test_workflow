@@ -11,7 +11,7 @@ jobs:
                 - name: testing auto deployment of code
                   uses: appleboy/ssh-action@master
                   with: 
-                        host: 18.210.144.107
+                        host: 52.4.172.217
                         username: ubuntu
                         password: ${{ secrets.TEST_WORKFLOW_SECRET}}
                         port: 80
