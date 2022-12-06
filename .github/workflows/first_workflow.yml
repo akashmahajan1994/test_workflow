@@ -11,7 +11,7 @@ jobs:
                 - name: testing auto deployment of code
                   uses: appleboy/ssh-action@master
                   with: 
-                        host: staging.api.tommyjohn.com
+                        host: ec2-52-4-172-217.compute-1.amazonaws.com.
                         username: ubuntu
                         key: ${{ secrets.TEST_WORKFLOW_SECRET}}
                         port: 22
