@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
                 - name: testing auto deployment of code
-                  uses: appleboy/ssh-action@master
+                  uses: actions/checkout@v2
                   with: 
                         host: 52.4.172.217
                         username: ubuntu
