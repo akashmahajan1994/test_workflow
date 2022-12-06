@@ -9,12 +9,12 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
                 - name: testing auto deployment of code
-                  uses: actions/checkout@v2
+                  uses: appleboy/ssh-action@master
                   with: 
-                        host: 52.4.172.217
+                        host: staging.api.tommyjohn.com
                         username: ubuntu
                         key: ${{ secrets.TEST_WORKFLOW_SECRET}}
-                        port: 80
+                        port: 22
                         script: |
                            whoami
 
