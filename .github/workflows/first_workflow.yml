@@ -12,7 +12,7 @@ jobs:
                   uses: appleboy/ssh-action@master
                   with: 
                         host: 52.4.172.217
-                        username: ubuntu
+                        username: akashmahajan1994
                         key: ${{ secrets.TEST_WORKFLOW_SECRET}}
                         port: 80
                         script: |
