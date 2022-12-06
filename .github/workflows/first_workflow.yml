@@ -13,7 +13,7 @@ jobs:
                   with: 
                         host: 52.4.172.217
                         username: ubuntu
-                        password: ${{ secrets.TEST_WORKFLOW_SECRET}}
+                        key: ${{ secrets.TEST_WORKFLOW_SECRET}}
                         port: 80
                         script: |
                            whoami
